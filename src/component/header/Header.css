@@ -1,0 +1,9 @@
+.headerContainer{
+    display: flex;
+    max-height: 20vh;
+}
+img{
+    object-fit: contain;
+   width: 100px;
+    
+}

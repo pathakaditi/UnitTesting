@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Container = styled.div`
 text-align: center;
 `
-
 class HeadLine extends Component {
     constructor(props){
         super(props);
@@ -22,6 +22,11 @@ class HeadLine extends Component {
             </Container>
         )
     }
+}
+
+HeadLine.prototypes = {
+    header: PropTypes.string,
+    desc: PropTypes.string
 }
 
 export default HeadLine

@@ -16,8 +16,9 @@ describe("Load Header",()=>{
     it("Should render without errors", ()=>{
         // const component = setUp();
         // console.log(component.debug());
-        const wrapper = findByTestAttr(component,'headerContainer')
-        expect(wrapper.length).toBe(1);
+        // const wrapper = findByTestAttr(component,'headerContainer')
+        const header = <p>Start App</p>
+        expect(component.contains(header)).toEqual(true);
     });
     it("Should render logo", ()=>{
         // const component =  shallow(<Header/>);

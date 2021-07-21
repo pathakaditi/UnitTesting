@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import HeadLine from './HeadLine';
-import {findByTestAttr} from '../../Utility'
+import {findByTestAttr, checkProps} from '../../Utility'
 
 const setup = (props={}) =>{
     const component = shallow(<HeadLine {...props}/>);
@@ -46,7 +46,16 @@ describe('Testing HeadLine Functionality',()=>{
         })
     })
     
-
+    describe('Checking Proptypes',()=>{
+        it('should not throw a warning',()=>{
+            const expectedProp = {
+                header: 'Header',
+                desc: 'Description'
+            }
+        const propsErr = checkProps(HeadLine, expectedProp);
+        expect(propsErr).toBeUndefined();
+        })
+    })
     // it('Should render without error', ()=>{
     //    const wrapper = findByTestAttr(component,'HeadLineContainer');
     //    expect(wrapper.length).toBe(1);
