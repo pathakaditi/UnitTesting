@@ -6,9 +6,9 @@ const Container = styled.div`
 text-align: center;
 `
 class HeadLine extends Component {
-    constructor(props){
-        super(props);
-    };
+    // constructor(props){
+    //     super(props);
+    // };
 
     render() {
         const {header, desc} = this.props;
